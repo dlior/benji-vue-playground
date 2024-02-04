@@ -1,5 +1,5 @@
 export enum CPUStatus {
-  overload = 'overload',
-  recover = 'recover',
-  neutral = 'neutral',
+  Overload = 'overload',
+  Recover = 'recover',
+  Neutral = 'neutral'
 }

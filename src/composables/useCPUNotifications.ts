@@ -9,20 +9,20 @@ export function useCPUNotifications() {
 
   watchEffect(() => {
     switch (currentStatus$.value) {
-      case CPUStatus.overload: {
-        setStatus(CPUStatus.overload);
+      case CPUStatus.Overload: {
+        setStatus(CPUStatus.Overload);
         showToast();
         break;
       }
-      case CPUStatus.recover: {
-        setStatus(CPUStatus.recover);
+      case CPUStatus.Recover: {
+        setStatus(CPUStatus.Recover);
         showToast();
         break;
       }
       default:
-      case CPUStatus.neutral: {
+      case CPUStatus.Neutral: {
         hideToast();
-        setStatus(CPUStatus.neutral);
+        setStatus(CPUStatus.Neutral);
         break;
       }
     }

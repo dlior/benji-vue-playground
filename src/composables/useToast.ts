@@ -2,15 +2,15 @@ import type { CPUStatus } from '../models/models';
 
 export function useToast() {
   function setStatus(status: CPUStatus) {
-    return `setStatus: ${status}`;
+    console.log(`setStatus: ${status}`);
   }
 
   function showToast() {
-    return 'showToast';
+    console.log('showToast');
   }
 
   function hideToast() {
-    return 'hideToast';
+    console.log('hideToast');
   }
 
   return { setStatus, showToast, hideToast };

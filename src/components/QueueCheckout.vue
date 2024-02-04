@@ -12,7 +12,7 @@ const queueWithleastItems$ = computed(() => {
 const onSubmit = () => {
   queues$.value[queueWithleastItems$.value].push(checkoutValue$.value);
 };
-const reduceItesInterval = setInterval(() => {
+const reduceItemsInterval = setInterval(() => {
   queues$.value = queues$.value.map((queue) => {
     return --queue[0] ? queue : queue.slice(1);
   });
@@ -28,7 +28,7 @@ watchEffect(() => {
   });
 });
 
-onUnmounted(() => clearInterval(reduceItesInterval));
+onUnmounted(() => clearInterval(reduceItemsInterval));
 </script>
 
 <template>

@@ -20,7 +20,7 @@ vi.mock('./useToast', () => ({
   })
 }));
 
-const currentStatusMock = ref(CPUStatus.neutral);
+const currentStatusMock = ref(CPUStatus.Neutral);
 const setStatusMock = vi.fn();
 
 describe('useCPUNotifications', () => {
@@ -31,7 +31,7 @@ describe('useCPUNotifications', () => {
     vi.restoreAllMocks();
   });
 
-  it.each([[CPUStatus.overload], [CPUStatus.recover], [CPUStatus.neutral]])(
+  it.each([[CPUStatus.Overload], [CPUStatus.Recover], [CPUStatus.Neutral]])(
     'Should call setStatus with %s',
     async (status) => {
       currentStatusMock.value = status;

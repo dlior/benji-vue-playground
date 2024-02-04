@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Checkout from './components/Checkout.vue';
+import QueueCheckout from './components/QueueCheckout.vue';
 </script>
 
 <template>
-  <Checkout />
+  <QueueCheckout />
 </template>
